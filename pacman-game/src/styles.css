@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+}
+
+.title {
+  color: yellow;
+  letter-spacing: 5px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.history {
+  margin-bottom: 10px;
+}
+
+.badge {
+  margin: 5px;
+  padding: 5px 10px;
+  background: purple;
+  border-radius: 10px;
+}
+
+/* 🎮 GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(20, 25px);
+  justify-content: center;
+}
+
+/* cells */
+.cell {
+  width: 25px;
+  height: 25px;
+}
+
+/* walls */
+.wall {
+  background: blue;
+}
+
+/* dots */
+.dot {
+  background: black;
+  position: relative;
+}
+
+.dot::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* pacman */
+.pacman {
+  background: yellow;
+  border-radius: 50%;
+}
+
+/* ghost */
+.ghost {
+  background: red;
+  border-radius: 50%;
+}
+
+/* overlay */
+.game {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+button {
+  padding: 10px 20px;
+  background: yellow;
+  border: none;
+  cursor: pointer;
+}
